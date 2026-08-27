@@ -1,0 +1,59 @@
+{
+  "model": "Optuna TPE search for a homogeneous flat retrofit layer over existing AR",
+  "objective": "Maximize AM1.5G-weighted transmitted optical power from 300 to 1200 nm",
+  "optimizer": {
+    "library": "Optuna",
+    "sampler": "TPESampler",
+    "seed": 42,
+    "trials_per_study": 600
+  },
+  "baseline": {
+    "description": "Existing AR without retrofit",
+    "transmitted_power_w_m2": 827.4452255420653
+  },
+  "search_spaces": {
+    "practical_polymer": {
+      "refractive_index_min": 1.3,
+      "refractive_index_max": 1.6,
+      "thickness_nm_min": 20.0,
+      "thickness_nm_max": 1000.0,
+      "description": "Homogeneous polymer-like flat film"
+    },
+    "engineered_low_index": {
+      "refractive_index_min": 1.02,
+      "refractive_index_max": 1.3,
+      "thickness_nm_min": 20.0,
+      "thickness_nm_max": 500.0,
+      "description": "Engineered porous or effective-index film"
+    }
+  },
+  "results": {
+    "practical_polymer": {
+      "description": "Homogeneous polymer-like flat film",
+      "best_refractive_index": 1.3,
+      "best_thickness_nm": 20.0,
+      "transmitted_power_w_m2": 827.7692440429137,
+      "additional_power_w_m2": 0.32401850084841044,
+      "absolute_gain_percentage_points": 0.03875441501301559,
+      "relative_gain_percent": 0.03915890633559016,
+      "best_parameter_at_boundary": {
+        "refractive_index_near_minimum": true,
+        "thickness_near_minimum": true
+      }
+    },
+    "engineered_low_index": {
+      "description": "Engineered porous or effective-index film",
+      "best_refractive_index": 1.1004743296279555,
+      "best_thickness_nm": 118.790846136428,
+      "transmitted_power_w_m2": 833.3815888354607,
+      "additional_power_w_m2": 5.936363293395402,
+      "absolute_gain_percentage_points": 0.710022070153054,
+      "relative_gain_percent": 0.7174327810649306,
+      "best_parameter_at_boundary": {
+        "refractive_index_near_minimum": false,
+        "thickness_near_minimum": false
+      }
+    }
+  },
+  "warning": "Optimized optical power is not electrical power. Material ranges are exploratory assumptions."
+}
