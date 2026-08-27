@@ -1,0 +1,14 @@
+{
+  "model": "AM1.5G-weighted optical transmission comparison",
+  "solcore_version": "5.10.1",
+  "wavelength_min_nm": 300.0,
+  "wavelength_max_nm": 1199.9999999999998,
+  "incident_power_in_band_w_m2": 842.4082250156303,
+  "baseline_transmitted_power_w_m2": 806.6080133551668,
+  "ideal_film_transmitted_power_w_m2": 835.130453695013,
+  "baseline_weighted_transmittance": 0.9575025378464234,
+  "ideal_film_weighted_transmittance": 0.9913607546739205,
+  "absolute_gain_percentage_points": 3.3858216827497123,
+  "relative_optical_gain_percent": 3.536096823685675,
+  "warning": "Optical power gain only. This is not electrical module power or energy yield."
+}
