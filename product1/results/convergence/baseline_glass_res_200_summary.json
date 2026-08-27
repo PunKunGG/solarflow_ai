@@ -1,0 +1,17 @@
+{
+  "model": "1D air-to-glass interface baseline",
+  "meep_version": "1.34.0",
+  "glass_refractive_index": 1.52,
+  "resolution_pixels_per_um": 200,
+  "pml_thickness_um": 1.0,
+  "number_of_frequencies": 181,
+  "wavelength_min_nm": 300.0,
+  "wavelength_max_nm": 1200.0,
+  "valid_frequency_points": 181,
+  "mean_reflectance": 0.042423305324255034,
+  "mean_transmittance": 0.9575638532987583,
+  "analytic_fresnel_reflectance": 0.042579994960947345,
+  "maximum_fresnel_error": 0.00038308789696693546,
+  "maximum_energy_residual": 0.0009419636606490256,
+  "warning": "Validation baseline only. This is not an electrical power-gain result."
+}

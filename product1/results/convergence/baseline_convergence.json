@@ -1,0 +1,62 @@
+{
+  "resolutions": [
+    50,
+    100,
+    200
+  ],
+  "summaries": [
+    {
+      "model": "1D air-to-glass interface baseline",
+      "meep_version": "1.34.0",
+      "glass_refractive_index": 1.52,
+      "resolution_pixels_per_um": 50,
+      "pml_thickness_um": 1.0,
+      "number_of_frequencies": 181,
+      "wavelength_min_nm": 300.0,
+      "wavelength_max_nm": 1200.0,
+      "valid_frequency_points": 181,
+      "mean_reflectance": 0.040032551548910465,
+      "mean_transmittance": 0.9599787263509928,
+      "analytic_fresnel_reflectance": 0.042579994960947345,
+      "maximum_fresnel_error": 0.005899990802447012,
+      "maximum_energy_residual": 0.0006838194296127087,
+      "warning": "Validation baseline only. This is not an electrical power-gain result."
+    },
+    {
+      "model": "1D air-to-glass interface baseline",
+      "meep_version": "1.34.0",
+      "glass_refractive_index": 1.52,
+      "resolution_pixels_per_um": 100,
+      "pml_thickness_um": 1.0,
+      "number_of_frequencies": 181,
+      "wavelength_min_nm": 300.0,
+      "wavelength_max_nm": 1200.0,
+      "valid_frequency_points": 181,
+      "mean_reflectance": 0.04195372286424401,
+      "mean_transmittance": 0.9580561141935114,
+      "analytic_fresnel_reflectance": 0.042579994960947345,
+      "maximum_fresnel_error": 0.0014289896069256125,
+      "maximum_energy_residual": 0.0008717905031982998,
+      "warning": "Validation baseline only. This is not an electrical power-gain result."
+    },
+    {
+      "model": "1D air-to-glass interface baseline",
+      "meep_version": "1.34.0",
+      "glass_refractive_index": 1.52,
+      "resolution_pixels_per_um": 200,
+      "pml_thickness_um": 1.0,
+      "number_of_frequencies": 181,
+      "wavelength_min_nm": 300.0,
+      "wavelength_max_nm": 1200.0,
+      "valid_frequency_points": 181,
+      "mean_reflectance": 0.042423305324255034,
+      "mean_transmittance": 0.9575638532987583,
+      "analytic_fresnel_reflectance": 0.042579994960947345,
+      "maximum_fresnel_error": 0.00038308789696693546,
+      "maximum_energy_residual": 0.0009419636606490256,
+      "warning": "Validation baseline only. This is not an electrical power-gain result."
+    }
+  ],
+  "reflectance_change_100_to_200": 0.00046958246001102544,
+  "passes_initial_tolerance": true
+}
