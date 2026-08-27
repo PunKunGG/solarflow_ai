@@ -1,0 +1,22 @@
+{
+  "model": "1D ideal quarter-wave anti-reflection film on glass",
+  "model_role": "Theoretical optical upper bound, not a final manufacturable material",
+  "meep_version": "1.34.0",
+  "resolution_pixels_per_um": 200,
+  "air_refractive_index": 1.0,
+  "film_refractive_index": 1.2328828005937953,
+  "glass_refractive_index": 1.52,
+  "design_wavelength_nm": 550.0,
+  "film_thickness_nm": 111.52722702739925,
+  "bare_glass_fresnel_reflectance": 0.042579994960947345,
+  "evaluated_wavelength_nm": 549.618320610687,
+  "reflectance_at_design_wavelength": 1.0252505469122882e-07,
+  "transmittance_at_design_wavelength": 0.9999991643700925,
+  "minimum_meep_reflectance": 1.0252505469122882e-07,
+  "minimum_reflectance_wavelength_nm": 549.618320610687,
+  "mean_reflectance_unweighted_frequency_grid": 0.01426674510684738,
+  "mean_transmittance_unweighted_frequency_grid": 0.9857052918517325,
+  "maximum_analytic_reflectance_error": 0.00023579165955579795,
+  "maximum_energy_residual": 0.0007276696018542195,
+  "warning": "Unweighted spectral values are not electrical power-gain results."
+}
