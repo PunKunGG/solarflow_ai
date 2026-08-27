@@ -1,0 +1,17 @@
+name: solarflow
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - h5py
+  - jupyter
+  - pip
+  - pip:
+      - optuna
+      - openai
+      - pydantic
