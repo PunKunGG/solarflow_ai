@@ -1,0 +1,54 @@
+{
+  "analysis": "AM1.5G-weighted optical baseline headroom comparison",
+  "analysis_role": "Compares separate optical baselines. This is not yet a stacked retrofit model.",
+  "wavelength_min_nm": 300.0,
+  "wavelength_max_nm": 1200.0,
+  "incident_power_in_band_w_m2": 836.08151675,
+  "cases": {
+    "Bare glass": {
+      "transmitted_power_w_m2": 800.7905969188105,
+      "solar_weighted_transmittance": 0.9577900968695353,
+      "solar_weighted_transmittance_percent": 95.77900968695353,
+      "additional_transmitted_power_w_m2": 0.0,
+      "absolute_gain_percentage_points": 0.0,
+      "relative_gain_percent": 0.0
+    },
+    "Existing AR 100 nm": {
+      "transmitted_power_w_m2": 827.4178617448698,
+      "solar_weighted_transmittance": 0.989637786709115,
+      "solar_weighted_transmittance_percent": 98.9637786709115,
+      "additional_transmitted_power_w_m2": 26.62726482605933,
+      "absolute_gain_percentage_points": 3.1847689839579667,
+      "relative_gain_percent": 3.3251220641841606
+    },
+    "Existing AR 180 nm": {
+      "transmitted_power_w_m2": 820.5456410826546,
+      "solar_weighted_transmittance": 0.9814182285386045,
+      "solar_weighted_transmittance_percent": 98.14182285386045,
+      "additional_transmitted_power_w_m2": 19.755044163844104,
+      "absolute_gain_percentage_points": 2.3628131669069226,
+      "relative_gain_percent": 2.4669425739831663
+    },
+    "Ideal flat film": {
+      "transmitted_power_w_m2": 828.9118312575504,
+      "solar_weighted_transmittance": 0.9914246573464278,
+      "solar_weighted_transmittance_percent": 99.14246573464278,
+      "additional_transmitted_power_w_m2": 28.121234338739896,
+      "absolute_gain_percentage_points": 3.3634560476892514,
+      "relative_gain_percent": 3.5116838842690568
+    }
+  },
+  "ideal_film_headroom": {
+    "versus_existing_ar_100nm": {
+      "additional_transmitted_power_w_m2": 1.4939695126805645,
+      "absolute_gain_percentage_points": 0.17868706373128473,
+      "relative_gain_percent": 0.18055804470187287
+    },
+    "versus_existing_ar_180nm": {
+      "additional_transmitted_power_w_m2": 8.366190174895792,
+      "absolute_gain_percentage_points": 1.0006428807823293,
+      "relative_gain_percent": 1.019588643948821
+    }
+  },
+  "warning": "Optical transmission gain is not electrical power gain."
+}
