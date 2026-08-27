@@ -30,6 +30,16 @@ FILM_THICKNESS_UM = (
 
 RESOLUTION = 200
 
+MODEL_NAME = (
+    "1D ideal quarter-wave anti-reflection "
+    "film on glass"
+)
+
+MODEL_ROLE = (
+    "Theoretical optical upper bound, "
+    "not a final manufacturable material"
+)
+
 RESULTS_DIRECTORY = (
     Path(__file__).resolve().parents[1]
     / "results"
@@ -266,14 +276,8 @@ def main() -> None:
             )
 
     summary = {
-        "model": (
-            "1D ideal quarter-wave anti-reflection "
-            "film on glass"
-        ),
-        "model_role": (
-            "Theoretical optical upper bound, "
-            "not a final manufacturable material"
-        ),
+        "model": MODEL_NAME,
+        "model_role": MODEL_ROLE,
         "meep_version": mp.__version__,
         "resolution_pixels_per_um": RESOLUTION,
         "air_refractive_index": AIR_REFRACTIVE_INDEX,
@@ -332,7 +336,7 @@ def main() -> None:
         json.dump(summary, summary_file, indent=2)
 
     print()
-    print("Ideal flat-film simulation completed.")
+    print(f"{MODEL_NAME} simulation completed.")
     print(
         "Film index        : "
         f"{FILM_REFRACTIVE_INDEX:.6f}"

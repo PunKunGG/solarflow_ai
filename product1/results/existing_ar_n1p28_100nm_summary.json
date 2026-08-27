@@ -1,0 +1,22 @@
+{
+  "model": "Representative optically optimized porous-silica AR coating",
+  "model_role": "Representative existing-module baseline; not confirmed as the Sirindhorn module coating",
+  "meep_version": "1.34.0",
+  "resolution_pixels_per_um": 200,
+  "air_refractive_index": 1.0,
+  "film_refractive_index": 1.28,
+  "glass_refractive_index": 1.52,
+  "design_wavelength_nm": 512.0,
+  "film_thickness_nm": 100.0,
+  "bare_glass_fresnel_reflectance": 0.042579994960947345,
+  "evaluated_wavelength_nm": 510.6382978723404,
+  "reflectance_at_design_wavelength": 0.0014067399257764576,
+  "transmittance_at_design_wavelength": 0.9985902946561375,
+  "minimum_meep_reflectance": 0.0014067399257764576,
+  "minimum_reflectance_wavelength_nm": 510.6382978723404,
+  "mean_reflectance_unweighted_frequency_grid": 0.013242772067146422,
+  "mean_transmittance_unweighted_frequency_grid": 0.9867248711140234,
+  "maximum_analytic_reflectance_error": 0.0002365469894540645,
+  "maximum_energy_residual": 0.0006926676281290289,
+  "warning": "Unweighted spectral values are not electrical power-gain results."
+}
