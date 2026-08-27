@@ -1,0 +1,31 @@
+{
+  "model": "Direct-contact flat retrofit film over representative existing AR",
+  "model_role": "Naive stacked-film baseline, not an optimized final design",
+  "assumptions": {
+    "air_gap": false,
+    "adhesive_layer": false,
+    "angle_of_incidence_degrees": 0,
+    "existing_ar_refractive_index": 1.28,
+    "existing_ar_thickness_nm": 100.0,
+    "retrofit_refractive_index": 1.2328828005937953,
+    "retrofit_thickness_nm": 111.52722702739925
+  },
+  "incident_power_in_band_w_m2": 836.08151675,
+  "existing_ar": {
+    "transmitted_power_w_m2": 827.4452255420653,
+    "weighted_transmittance_percent": 98.9670515332637
+  },
+  "stacked_retrofit": {
+    "transmitted_power_w_m2": 824.5551869241915,
+    "weighted_transmittance_percent": 98.62138683909514
+  },
+  "stacked_gain_vs_existing_ar": {
+    "additional_power_w_m2": -2.8900386178737563,
+    "absolute_gain_percentage_points": -0.3456646941685613,
+    "relative_gain_percent": -0.34927249909266767
+  },
+  "validation": {
+    "maximum_existing_ar_meep_tmm_error": 0.00023654698945407837
+  },
+  "warning": "Optical gain is not electrical power gain."
+}
