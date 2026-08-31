@@ -1,0 +1,61 @@
+{
+  "model": "Normal-incidence coherent lossless thin-film transfer matrix",
+  "baseline_stack": "air -> existing AR -> glass",
+  "retrofit_stack": "air -> retrofit layer -> existing AR -> glass",
+  "wavelength_nm": 550.0,
+  "air_refractive_index": 1.0,
+  "glass_refractive_index": 1.52,
+  "retrofit_refractive_index": 1.100474,
+  "retrofit_thickness_nm": 118.791,
+  "existing_ar_refractive_indices": [
+    1.25,
+    1.28,
+    1.3,
+    1.35
+  ],
+  "existing_ar_thicknesses_nm": [
+    80.0,
+    100.0,
+    120.0,
+    140.0
+  ],
+  "number_of_cases": 16,
+  "best_case": {
+    "existing_ar_refractive_index": 1.35,
+    "existing_ar_thickness_nm": 140.0,
+    "baseline_reflectance_percent": 1.904278395305814,
+    "baseline_transmittance_percent": 98.09572160469416,
+    "retrofit_reflectance_percent": 0.48893322501964354,
+    "retrofit_transmittance_percent": 99.51106677498034,
+    "absolute_change_percentage_points": 1.4153451702861752,
+    "relative_change_percent": 1.4428204891439922,
+    "baseline_energy_residual": 2.220446049250313e-16,
+    "retrofit_energy_residual": 2.220446049250313e-16
+  },
+  "worst_case": {
+    "existing_ar_refractive_index": 1.25,
+    "existing_ar_thickness_nm": 120.0,
+    "baseline_reflectance_percent": 0.10858487472104478,
+    "baseline_transmittance_percent": 99.89141512527895,
+    "retrofit_reflectance_percent": 0.7180877005121348,
+    "retrofit_transmittance_percent": 99.28191229948784,
+    "absolute_change_percentage_points": -0.6095028257911195,
+    "relative_change_percent": -0.6101653730970935,
+    "baseline_energy_residual": 0.0,
+    "retrofit_energy_residual": 2.220446049250313e-16
+  },
+  "maximum_energy_residual": 4.440892098500626e-16,
+  "document_regression_check": {
+    "matches_document_after_rounding_to_4_decimals": true,
+    "maximum_absolute_rounding_error": 4.976270352585743e-05,
+    "mismatches": []
+  },
+  "limitations": [
+    "Single wavelength only (550 nm)",
+    "Normal incidence only",
+    "Lossless and nondispersive refractive indices",
+    "No surface texture, scattering, absorption, temperature or environmental effects",
+    "Not an AM1.5G-weighted optical result",
+    "Not an electrical-power or field-performance prediction"
+  ]
+}
