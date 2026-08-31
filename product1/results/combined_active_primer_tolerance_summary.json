@@ -1,0 +1,124 @@
+{
+  "model": "Combined active-coating and release-primer AM1.5G tolerance screen",
+  "status": "Generic optical robustness screen only",
+  "nominal_stack": {
+    "active_refractive_index": 1.0929340906200649,
+    "active_thickness_nm": 116.73562789476563,
+    "primer_refractive_index": 1.2,
+    "primer_thickness_nm": 50.0
+  },
+  "tolerance_grid": {
+    "active_refractive_indices": [
+      1.06,
+      1.0929340906200649,
+      1.12
+    ],
+    "active_thicknesses_nm": [
+      100.0,
+      116.73562789476563,
+      135.0
+    ],
+    "primer_refractive_indices": [
+      1.15,
+      1.2,
+      1.25
+    ],
+    "primer_thicknesses_nm": [
+      30.0,
+      50.0,
+      75.0
+    ]
+  },
+  "provisional_margin_percent": 0.1,
+  "reference_results": {
+    "incident_power_w_m2": 836.08151675,
+    "baseline_power_w_m2": 827.4452255420653,
+    "baseline_weighted_transmittance_percent": 98.9670515332637,
+    "baseline_maximum_energy_residual": 7.771561172376096e-16
+  },
+  "number_of_cases": 81,
+  "number_passing_positive_gain": 81,
+  "number_passing_provisional_margin": 81,
+  "all_cases_pass_provisional_margin": true,
+  "nominal_result": {
+    "active_refractive_index": 1.0929340906200649,
+    "active_thickness_nm": 116.73562789476563,
+    "primer_refractive_index": 1.2,
+    "primer_thickness_nm": 50.0,
+    "transmitted_power_w_m2": 832.9620348635659,
+    "weighted_transmittance_percent": 99.62689261466274,
+    "additional_power_vs_baseline_w_m2": 5.516809321500659,
+    "relative_gain_vs_baseline_percent": 0.6667280384495008,
+    "passes_positive_gain_gate": true,
+    "passes_provisional_margin_gate": true,
+    "maximum_energy_residual": 9.992007221626409e-16
+  },
+  "worst_case": {
+    "active_refractive_index": 1.06,
+    "active_thickness_nm": 100.0,
+    "primer_refractive_index": 1.25,
+    "primer_thickness_nm": 75.0,
+    "transmitted_power_w_m2": 828.9167385647281,
+    "weighted_transmittance_percent": 99.14305267587751,
+    "additional_power_vs_baseline_w_m2": 1.4715130226628617,
+    "relative_gain_vs_baseline_percent": 0.17783811873454983,
+    "passes_positive_gain_gate": true,
+    "passes_provisional_margin_gate": true,
+    "maximum_energy_residual": 8.881784197001252e-16
+  },
+  "best_case": {
+    "active_refractive_index": 1.0929340906200649,
+    "active_thickness_nm": 100.0,
+    "primer_refractive_index": 1.15,
+    "primer_thickness_nm": 30.0,
+    "transmitted_power_w_m2": 833.4998051271778,
+    "weighted_transmittance_percent": 99.69121292946915,
+    "additional_power_vs_baseline_w_m2": 6.054579585112492,
+    "relative_gain_vs_baseline_percent": 0.7317196834565205,
+    "passes_positive_gain_gate": true,
+    "passes_provisional_margin_gate": true,
+    "maximum_energy_residual": 9.992007221626409e-16
+  },
+  "active_worst_case_gain_matrix_percent": [
+    [
+      0.17783811873454983,
+      0.23533574021079692,
+      0.2510398640984815
+    ],
+    [
+      0.27709224487238016,
+      0.3350816902793613,
+      0.3383713944121142
+    ],
+    [
+      0.26097174887158364,
+      0.30746758518380657,
+      0.2955493788964481
+    ]
+  ],
+  "primer_worst_case_gain_matrix_percent": [
+    [
+      0.5315683929601055,
+      0.4367684826051927,
+      0.34014724785086353
+    ],
+    [
+      0.5865613645727565,
+      0.5109197038725376,
+      0.42498800126608044
+    ],
+    [
+      0.5476047518605816,
+      0.39746488688842263,
+      0.17783811873454983
+    ]
+  ],
+  "decision": "The complete 81-case tolerance box passes the provisional margin. Lock the nominal direct-coating/release-primer optical stack and advance it to angle and polarization screening.",
+  "limitations": [
+    "The tolerance box contains discrete corner and nominal values, not a statistical process model.",
+    "Refractive indices are generic, lossless and nondispersive.",
+    "Normal incidence only; angle and polarization are not included.",
+    "Optical tolerance does not prove coating or primer manufacturability.",
+    "Release behavior, durability and electrical gain are not demonstrated."
+  ]
+}
