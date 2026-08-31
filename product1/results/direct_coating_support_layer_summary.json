@@ -1,0 +1,171 @@
+{
+  "model": "AM1.5G-weighted coherent TMM support-layer optimization",
+  "status": "Engineering screen only; generic layers, not selected materials",
+  "stacks": [
+    {
+      "name": "active_only_reference",
+      "include_protective_topcoat": false,
+      "include_release_primer": false,
+      "description": "Re-optimized direct active coating without a support layer."
+    },
+    {
+      "name": "protective_topcoat",
+      "include_protective_topcoat": true,
+      "include_release_primer": false,
+      "description": "Generic protective layer above the active coating."
+    },
+    {
+      "name": "release_primer",
+      "include_protective_topcoat": false,
+      "include_release_primer": true,
+      "description": "Generic removal-support layer below the active coating."
+    },
+    {
+      "name": "protective_and_release",
+      "include_protective_topcoat": true,
+      "include_release_primer": true,
+      "description": "Both generic protective and removal-support layers."
+    }
+  ],
+  "search_ranges": {
+    "active_refractive_index": [
+      1.02,
+      1.3
+    ],
+    "active_thickness_nm": [
+      50.0,
+      250.0
+    ],
+    "protective_refractive_index": [
+      1.3,
+      1.55
+    ],
+    "protective_thickness_nm": [
+      50.0,
+      300.0
+    ],
+    "release_refractive_index": [
+      1.2,
+      1.5
+    ],
+    "release_thickness_nm": [
+      20.0,
+      150.0
+    ]
+  },
+  "optimization": {
+    "algorithm": "Optuna TPE",
+    "trials_per_scenario": 240,
+    "random_seed_base": 20260831
+  },
+  "provisional_practical_margin_percent": 0.1,
+  "reference_results": {
+    "incident_power_w_m2": 836.08151675,
+    "baseline_power_w_m2": 827.4452255420653,
+    "baseline_weighted_transmittance_percent": 98.9670515332637,
+    "validated_active_power_w_m2": 833.3815891060626,
+    "validated_active_additional_power_w_m2": 5.936363563997361,
+    "validated_active_relative_gain_percent": 0.7174328137682354,
+    "baseline_maximum_energy_residual": 7.771561172376096e-16,
+    "validated_active_maximum_energy_residual": 8.881784197001252e-16
+  },
+  "results": [
+    {
+      "scenario": "active_only_reference",
+      "active_refractive_index": 1.099528506782685,
+      "active_thickness_nm": 119.36498143392957,
+      "protective_refractive_index": null,
+      "protective_thickness_nm": null,
+      "release_refractive_index": null,
+      "release_thickness_nm": null,
+      "transmitted_power_w_m2": 833.3817547260564,
+      "weighted_transmittance_percent": 99.67709344485475,
+      "additional_power_vs_baseline_w_m2": 5.936529183991183,
+      "absolute_gain_vs_baseline_percentage_points": 0.7100419115910546,
+      "relative_gain_vs_baseline_percent": 0.717452829593901,
+      "gain_retention_vs_validated_active_percent": 100.00278992336027,
+      "maximum_energy_residual": 9.992007221626409e-16,
+      "best_trial_number": 152,
+      "passes_positive_gain_gate": true,
+      "passes_provisional_practical_margin_gate": true,
+      "active_parameter_near_boundary": false,
+      "protective_parameter_near_boundary": null,
+      "release_parameter_near_boundary": null
+    },
+    {
+      "scenario": "protective_topcoat",
+      "active_refractive_index": 1.1856107792991086,
+      "active_thickness_nm": 243.4319452867923,
+      "protective_refractive_index": 1.300007281938919,
+      "protective_thickness_nm": 285.42625289354976,
+      "release_refractive_index": null,
+      "release_thickness_nm": null,
+      "transmitted_power_w_m2": 819.7601425657658,
+      "weighted_transmittance_percent": 98.04787286200533,
+      "additional_power_vs_baseline_w_m2": -7.685082976299441,
+      "absolute_gain_vs_baseline_percentage_points": -0.9191786712583658,
+      "relative_gain_vs_baseline_percent": -0.9287724116439113,
+      "gain_retention_vs_validated_active_percent": -129.4577546245255,
+      "maximum_energy_residual": 9.992007221626409e-16,
+      "best_trial_number": 144,
+      "passes_positive_gain_gate": false,
+      "passes_provisional_practical_margin_gate": false,
+      "active_parameter_near_boundary": false,
+      "protective_parameter_near_boundary": true,
+      "release_parameter_near_boundary": null
+    },
+    {
+      "scenario": "release_primer",
+      "active_refractive_index": 1.0929340906200649,
+      "active_thickness_nm": 116.73562789476563,
+      "protective_refractive_index": null,
+      "protective_thickness_nm": null,
+      "release_refractive_index": 1.2121405844940432,
+      "release_thickness_nm": 20.027312627319393,
+      "transmitted_power_w_m2": 833.5041748419894,
+      "weighted_transmittance_percent": 99.69173557166661,
+      "additional_power_vs_baseline_w_m2": 6.058949299924166,
+      "absolute_gain_vs_baseline_percentage_points": 0.7246840384029056,
+      "relative_gain_vs_baseline_percent": 0.7322477806255883,
+      "gain_retention_vs_validated_active_percent": 102.06499710816666,
+      "maximum_energy_residual": 9.992007221626409e-16,
+      "best_trial_number": 176,
+      "passes_positive_gain_gate": true,
+      "passes_provisional_practical_margin_gate": true,
+      "active_parameter_near_boundary": false,
+      "protective_parameter_near_boundary": null,
+      "release_parameter_near_boundary": true
+    },
+    {
+      "scenario": "protective_and_release",
+      "active_refractive_index": 1.2205726560981691,
+      "active_thickness_nm": 105.4753515805809,
+      "protective_refractive_index": 1.300106316556052,
+      "protective_thickness_nm": 271.3771641958355,
+      "release_refractive_index": 1.200137884577032,
+      "release_thickness_nm": 124.92623828136331,
+      "transmitted_power_w_m2": 819.8826683924381,
+      "weighted_transmittance_percent": 98.0625276324096,
+      "additional_power_vs_baseline_w_m2": -7.562557149627196,
+      "absolute_gain_vs_baseline_percentage_points": -0.9045239008540965,
+      "relative_gain_vs_baseline_percent": -0.9139646850548822,
+      "gain_retention_vs_validated_active_percent": -127.39376670748932,
+      "maximum_energy_residual": 9.992007221626409e-16,
+      "best_trial_number": 204,
+      "passes_positive_gain_gate": false,
+      "passes_provisional_practical_margin_gate": false,
+      "active_parameter_near_boundary": false,
+      "protective_parameter_near_boundary": true,
+      "release_parameter_near_boundary": true
+    }
+  ],
+  "decision": "The release-only stack retains margin, but the protective layer does not. Advance the release stack and redesign protection without adding the screened topcoat.",
+  "limitations": [
+    "Normal incidence only; angle and polarization are not included.",
+    "All refractive indices are lossless and nondispersive.",
+    "Layer ranges are generic and do not identify commercial materials.",
+    "Mechanical protection and removability are not proven by optical optimization.",
+    "The existing AR remains an assumed n=1.28, 100 nm layer.",
+    "Optical transmission gain is not electrical or annual-energy gain."
+  ]
+}
