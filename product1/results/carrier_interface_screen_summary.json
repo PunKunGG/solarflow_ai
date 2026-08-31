@@ -1,0 +1,233 @@
+{
+  "model": "Normal-incidence lossless nondispersive transfer-matrix screen",
+  "purpose": "Test whether a practical carrier/interface can retain positive broadband optical gain.",
+  "status": "Engineering screen only; not a selected material or electrical-power claim.",
+  "baseline_stack": "air -> existing AR -> cover glass",
+  "active_only_stack": "air -> retrofit coating -> existing AR -> cover glass",
+  "physical_stack": "air -> retrofit coating -> carrier -> interface -> existing AR -> cover glass",
+  "wavelength_range_nm": [
+    300.0,
+    1200.0
+  ],
+  "wavelength_step_nm": 1.0,
+  "solar_spectrum": "Solcore standard AM1.5G power density",
+  "phase_averaging": {
+    "enabled": true,
+    "samples_per_thick_layer": 11,
+    "reference_wavelength_nm": 750.0,
+    "reason": "Suppress exact-thickness coherent fringes in micrometre-scale layers."
+  },
+  "fixed_indices_and_thicknesses": {
+    "air_refractive_index": 1.0,
+    "glass_refractive_index": 1.52,
+    "existing_ar_refractive_index": 1.28,
+    "existing_ar_thickness_nm": 100.0,
+    "retrofit_refractive_index": 1.100474,
+    "retrofit_thickness_nm": 118.791
+  },
+  "carrier_grid": {
+    "refractive_indices": [
+      1.35,
+      1.4,
+      1.5,
+      1.6
+    ],
+    "thicknesses_um": [
+      25.0,
+      50.0,
+      100.0,
+      200.0
+    ],
+    "note": "Generic lossless nondispersive carriers; no commercial material assignment."
+  },
+  "interface_cases": [
+    {
+      "name": "optical_contact",
+      "refractive_index": null,
+      "thickness_um": 0.0,
+      "description": "Carrier directly coupled to the existing AR surface; no explicit gap layer."
+    },
+    {
+      "name": "air_gap_10um",
+      "refractive_index": 1.0,
+      "thickness_um": 10.0,
+      "description": "Controlled nominal 10 um air gap between carrier and module surface."
+    },
+    {
+      "name": "reversible_coupling_n1p40_25um",
+      "refractive_index": 1.4,
+      "thickness_um": 25.0,
+      "description": "Generic reversible optical-coupling layer; not a selected adhesive or gel."
+    }
+  ],
+  "reference_results": {
+    "incident_power_w_m2": 836.08151675,
+    "baseline_power_w_m2": 827.4452255420653,
+    "baseline_weighted_transmittance_percent": 98.9670515332637,
+    "active_only_power_w_m2": 833.3815891060626,
+    "active_only_additional_power_w_m2": 5.936363563997361,
+    "active_only_absolute_gain_percentage_points": 0.7100221025185534,
+    "active_only_relative_gain_percent": 0.7174328137682354,
+    "baseline_maximum_energy_residual": 7.771561172376096e-16,
+    "active_only_maximum_energy_residual": 8.881784197001252e-16
+  },
+  "number_of_candidates": 48,
+  "number_of_positive_gain_candidates": 0,
+  "recommended_next_action": "The current n=1.100474, 118.791 nm coating does not survive the added carrier/interface assumptions. Re-optimize the coating for the complete physical stack before rejecting the removable-skin concept.",
+  "best_candidate": {
+    "interface_mode": "optical_contact",
+    "carrier_refractive_index": 1.35,
+    "carrier_thickness_um": 50.0,
+    "interface_refractive_index": null,
+    "interface_thickness_um": 0.0,
+    "transmitted_power_w_m2": 821.4883704166324,
+    "weighted_transmittance_percent": 98.25457852601576,
+    "additional_power_vs_baseline_w_m2": -5.956855125432867,
+    "absolute_gain_vs_baseline_percentage_points": -0.7124730072479344,
+    "relative_gain_vs_baseline_percent": -0.7199092993171226,
+    "gain_retention_vs_active_only_percent": -100.3451871034278,
+    "maximum_energy_residual": 1.3322676295501878e-15
+  },
+  "worst_candidate": {
+    "interface_mode": "air_gap_10um",
+    "carrier_refractive_index": 1.6,
+    "carrier_thickness_um": 100.0,
+    "interface_refractive_index": 1.0,
+    "interface_thickness_um": 10.0,
+    "transmitted_power_w_m2": 764.1791263972549,
+    "weighted_transmittance_percent": 91.40007416594464,
+    "additional_power_vs_baseline_w_m2": -63.26609914481037,
+    "absolute_gain_vs_baseline_percentage_points": -7.566977367319055,
+    "relative_gain_vs_baseline_percent": -7.645956154180997,
+    "gain_retention_vs_active_only_percent": -1065.738283424962,
+    "maximum_energy_residual": 1.3322676295501878e-15
+  },
+  "best_candidate_by_interface": {
+    "optical_contact": {
+      "interface_mode": "optical_contact",
+      "carrier_refractive_index": 1.35,
+      "carrier_thickness_um": 50.0,
+      "interface_refractive_index": null,
+      "interface_thickness_um": 0.0,
+      "transmitted_power_w_m2": 821.4883704166324,
+      "weighted_transmittance_percent": 98.25457852601576,
+      "additional_power_vs_baseline_w_m2": -5.956855125432867,
+      "absolute_gain_vs_baseline_percentage_points": -0.7124730072479344,
+      "relative_gain_vs_baseline_percent": -0.7199092993171226,
+      "gain_retention_vs_active_only_percent": -100.3451871034278,
+      "maximum_energy_residual": 1.3322676295501878e-15
+    },
+    "air_gap_10um": {
+      "interface_mode": "air_gap_10um",
+      "carrier_refractive_index": 1.35,
+      "carrier_thickness_um": 50.0,
+      "interface_refractive_index": 1.0,
+      "interface_thickness_um": 10.0,
+      "transmitted_power_w_m2": 803.8365401661324,
+      "weighted_transmittance_percent": 96.1433214420037,
+      "additional_power_vs_baseline_w_m2": -23.60868537593285,
+      "absolute_gain_vs_baseline_percentage_points": -2.82373009126001,
+      "relative_gain_vs_baseline_percent": -2.853202199634016,
+      "gain_retention_vs_active_only_percent": -397.69608315625976,
+      "maximum_energy_residual": 1.4432899320127035e-15
+    },
+    "reversible_coupling_n1p40_25um": {
+      "interface_mode": "reversible_coupling_n1p40_25um",
+      "carrier_refractive_index": 1.35,
+      "carrier_thickness_um": 200.0,
+      "interface_refractive_index": 1.4,
+      "interface_thickness_um": 25.0,
+      "transmitted_power_w_m2": 818.6869337236667,
+      "weighted_transmittance_percent": 97.9195111149031,
+      "additional_power_vs_baseline_w_m2": -8.758291818398561,
+      "absolute_gain_vs_baseline_percentage_points": -1.0475404183605954,
+      "relative_gain_vs_baseline_percent": -1.0584739083678851,
+      "gain_retention_vs_active_only_percent": -147.53631114366928,
+      "maximum_energy_residual": 1.3322676295501878e-15
+    }
+  },
+  "top_five_candidates": [
+    {
+      "interface_mode": "optical_contact",
+      "carrier_refractive_index": 1.35,
+      "carrier_thickness_um": 50.0,
+      "interface_refractive_index": null,
+      "interface_thickness_um": 0.0,
+      "transmitted_power_w_m2": 821.4883704166324,
+      "weighted_transmittance_percent": 98.25457852601576,
+      "additional_power_vs_baseline_w_m2": -5.956855125432867,
+      "absolute_gain_vs_baseline_percentage_points": -0.7124730072479344,
+      "relative_gain_vs_baseline_percent": -0.7199092993171226,
+      "gain_retention_vs_active_only_percent": -100.3451871034278,
+      "maximum_energy_residual": 1.3322676295501878e-15
+    },
+    {
+      "interface_mode": "optical_contact",
+      "carrier_refractive_index": 1.35,
+      "carrier_thickness_um": 25.0,
+      "interface_refractive_index": null,
+      "interface_thickness_um": 0.0,
+      "transmitted_power_w_m2": 821.4862619015288,
+      "weighted_transmittance_percent": 98.25432633588103,
+      "additional_power_vs_baseline_w_m2": -5.958963640536467,
+      "absolute_gain_vs_baseline_percentage_points": -0.712725197382671,
+      "relative_gain_vs_baseline_percent": -0.7201641216350856,
+      "gain_retention_vs_active_only_percent": -100.38070573500873,
+      "maximum_energy_residual": 9.992007221626409e-16
+    },
+    {
+      "interface_mode": "optical_contact",
+      "carrier_refractive_index": 1.35,
+      "carrier_thickness_um": 100.0,
+      "interface_refractive_index": null,
+      "interface_thickness_um": 0.0,
+      "transmitted_power_w_m2": 821.4734561370599,
+      "weighted_transmittance_percent": 98.25279469522012,
+      "additional_power_vs_baseline_w_m2": -5.971769405005375,
+      "absolute_gain_vs_baseline_percentage_points": -0.7142568380435824,
+      "relative_gain_vs_baseline_percent": -0.7217117484838016,
+      "gain_retention_vs_active_only_percent": -100.59642305641019,
+      "maximum_energy_residual": 1.1102230246251565e-15
+    },
+    {
+      "interface_mode": "optical_contact",
+      "carrier_refractive_index": 1.35,
+      "carrier_thickness_um": 200.0,
+      "interface_refractive_index": null,
+      "interface_thickness_um": 0.0,
+      "transmitted_power_w_m2": 821.4690898621675,
+      "weighted_transmittance_percent": 98.25227246445614,
+      "additional_power_vs_baseline_w_m2": -5.976135679897766,
+      "absolute_gain_vs_baseline_percentage_points": -0.714779068807559,
+      "relative_gain_vs_baseline_percent": -0.7222394299251358,
+      "gain_retention_vs_active_only_percent": -100.66997439546347,
+      "maximum_energy_residual": 1.1102230246251565e-15
+    },
+    {
+      "interface_mode": "reversible_coupling_n1p40_25um",
+      "carrier_refractive_index": 1.35,
+      "carrier_thickness_um": 200.0,
+      "interface_refractive_index": 1.4,
+      "interface_thickness_um": 25.0,
+      "transmitted_power_w_m2": 818.6869337236667,
+      "weighted_transmittance_percent": 97.9195111149031,
+      "additional_power_vs_baseline_w_m2": -8.758291818398561,
+      "absolute_gain_vs_baseline_percentage_points": -1.0475404183605954,
+      "relative_gain_vs_baseline_percent": -1.0584739083678851,
+      "gain_retention_vs_active_only_percent": -147.53631114366928,
+      "maximum_energy_residual": 1.3322676295501878e-15
+    }
+  ],
+  "screening_flags": {
+    "any_positive_candidate": false,
+    "all_energy_residuals_below_1e-10": true,
+    "active_only_result_in_expected_neighborhood": true
+  },
+  "limitations": [
+    "Normal incidence only; angle and polarization are not included.",
+    "All layers are lossless and nondispersive.",
+    "Carrier haze, absorption, UV aging, water, dirt and roughness are not included.",
+    "The existing JA Solar coating is still an assumed n=1.28, 100 nm layer.",
+    "Optical gain is not electrical module-power or annual-energy gain."
+  ]
+}
