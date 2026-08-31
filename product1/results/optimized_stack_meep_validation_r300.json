@@ -1,0 +1,65 @@
+{
+  "model": "Meep validation of Optuna low-index retrofit candidate",
+  "candidate": {
+    "refractive_index": 1.1004743296279555,
+    "thickness_nm": 118.790846136428
+  },
+  "simulation": {
+    "meep_version": "1.34.0",
+    "resolution_pixels_per_um": 300,
+    "number_of_frequencies": 181,
+    "source_frequency_width": 3.0,
+    "monitor_frequency_width": 2.5,
+    "source_cutoff": 8.0,
+    "pml_thickness_um": 1.5,
+    "cell_length_um": 14.0,
+    "termination": "adaptive field decay after source",
+    "field_decay_check_interval": 50,
+    "field_decay_tolerance": 1e-09
+  },
+  "source_coverage": {
+    "minimum_relative_incident_flux_required": 1e-06,
+    "minimum_relative_incident_flux_observed": 0.00016062669528263082,
+    "valid_points": 181,
+    "total_points": 181,
+    "covers_full_requested_band": true
+  },
+  "meep_solar_weighted_result": {
+    "incident_power_w_m2": 836.08151675,
+    "existing_ar_power_w_m2": 827.4502809983783,
+    "stacked_power_w_m2": 833.3838411464392,
+    "additional_power_w_m2": 5.933560148060906,
+    "absolute_gain_percentage_points": 0.7096867983789101,
+    "relative_gain_percent": 0.7170896287450157
+  },
+  "tmm_solar_weighted_result": {
+    "existing_ar_power_w_m2": 827.4452255420653,
+    "stacked_power_w_m2": 833.3815888354607,
+    "relative_gain_percent": 0.7174327810649306
+  },
+  "validation": {
+    "maximum_allowed_error": 0.002,
+    "maximum_gain_difference_percent_allowed": 0.1,
+    "finite_spectra": true,
+    "maximum_existing_tmm_error": 0.00010447648577692481,
+    "maximum_existing_tmm_error_wavelength_nm": 300.0,
+    "maximum_stacked_tmm_error": 4.988407013138338e-05,
+    "maximum_stacked_tmm_error_wavelength_nm": 300.0,
+    "maximum_existing_energy_residual": 1.1680153646498326e-06,
+    "maximum_existing_energy_residual_wavelength_nm": 300.0,
+    "maximum_stacked_energy_residual": 3.0881757728806747e-07,
+    "maximum_stacked_energy_residual_wavelength_nm": 300.0,
+    "full_band_maximum_existing_energy_residual": 1.1680153646498326e-06,
+    "full_band_maximum_existing_energy_residual_wavelength_nm": 300.0,
+    "full_band_maximum_stacked_energy_residual": 3.0881757728806747e-07,
+    "full_band_maximum_stacked_energy_residual_wavelength_nm": 300.0,
+    "relative_gain_difference_percent": 0.0003431523199148856,
+    "passes_validation": true
+  },
+  "outputs": {
+    "csv": "/home/punkung/projects/solarflow-ai/imported/solarflow_ai/product1/results/optimized_stack_meep_validation_r300.csv",
+    "json": "/home/punkung/projects/solarflow-ai/imported/solarflow_ai/product1/results/optimized_stack_meep_validation_r300.json",
+    "figure": "/home/punkung/projects/solarflow-ai/imported/solarflow_ai/product1/results/figures/optimized_stack_meep_validation_r300.png"
+  },
+  "warning": "Optical gain is not electrical power gain."
+}

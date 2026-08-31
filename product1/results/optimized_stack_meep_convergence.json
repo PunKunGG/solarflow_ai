@@ -1,0 +1,37 @@
+{
+  "model": "Meep resolution convergence for optimized retrofit stack",
+  "resolutions_pixels_per_um": [
+    200,
+    250,
+    300
+  ],
+  "meep_relative_gain_percent": [
+    0.7167373030608992,
+    0.716965615951537,
+    0.7170896287450157
+  ],
+  "maximum_existing_energy_residual": [
+    4.059114228849303e-06,
+    1.2340222452777994e-06,
+    1.1680153646498326e-06
+  ],
+  "maximum_stacked_energy_residual": [
+    8.413465518719576e-07,
+    1.9608657542136143e-07,
+    3.0881757728806747e-07
+  ],
+  "individual_validation_passes": [
+    true,
+    true,
+    true
+  ],
+  "high_resolution_pair": [
+    250,
+    300
+  ],
+  "high_resolution_gain_spread_percent": 0.00012401279347873384,
+  "maximum_high_resolution_gain_spread_percent_allowed": 0.05,
+  "final_resolution_passes_validation": true,
+  "passes_convergence": true,
+  "note": "Coarse resolutions are diagnostic. The convergence gate uses the two highest resolutions and requires the highest-resolution run to pass the strict individual validation criteria."
+}
