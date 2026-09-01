@@ -1,0 +1,245 @@
+{
+  "phase": "1.6B",
+  "title": "SolarFlow measured-module spectral-response proxy ensemble",
+  "scientific_status": "MEASURED_PROXY_SR_SENSITIVITY_ONLY",
+  "quantity_reported": "relative normalized-photocurrent proxy gain",
+  "dataset": {
+    "path": "data/external/sr_library.nc",
+    "landing_page": "https://datahub.duramat.org/dataset/module-sr-library",
+    "resource_page": "https://datahub.duramat.org/dataset/module-sr-library/resource/1004264a-d8d6-4eaf-a0de-4efff68d2fc6",
+    "osti_record": "https://www.osti.gov/biblio/2204677",
+    "doi": "10.21948/2204677",
+    "method_report": "https://www.osti.gov/servlets/purl/2293575",
+    "license_status": "The DuraMAT resource page states 'No License Provided'. Do not redistribute or commit the NetCDF file until reuse terms are clarified.",
+    "expected_processing": "NREL module QE measurements converted by Sandia to normalized median spectral response, with zero endpoints at 300 and 1200 nm and monotonic cubic interpolation on a 5 nm grid.",
+    "resolved_path": "/home/punkung/projects/solarflow-ai/imported/solarflow_ai/data/external/sr_library.nc",
+    "size_bytes": 335353,
+    "sha256": "baf93fdacadd5d829dd0d2b526673b60c9185807851f8810bc7b6f1f08d68b47"
+  },
+  "optical_model": {
+    "wavelength_min_nm": 300.0,
+    "wavelength_max_nm": 1200.0,
+    "wavelength_step_nm": 1.0,
+    "incident_refractive_index": 1.0,
+    "glass_refractive_index": 1.52,
+    "spectrum": "Solcore standard AM1.5G power_density_per_nm",
+    "incidence": "normal",
+    "coherence": "coherent thin-film TMM",
+    "dispersion": "n and k are constant within each defined scenario"
+  },
+  "gates": {
+    "positive_gain_percent": 0.0,
+    "provisional_margin_percent": 0.1
+  },
+  "optical_case_count": 20160,
+  "proxy_count": 3,
+  "evaluated_case_proxy_combinations": 60480,
+  "nominal_optical_case": {
+    "parameters": {
+      "existing_ar_refractive_index": 1.28,
+      "existing_ar_thickness_nm": 100.0,
+      "active_refractive_index": 1.092934,
+      "active_extinction_coefficient": 0.0,
+      "active_thickness_nm": 116.736,
+      "primer_refractive_index": 1.2,
+      "primer_thickness_nm": 50.0
+    },
+    "by_proxy": [
+      {
+        "proxy_id": "itek_360_mono",
+        "proxy_label": "Itek Energy IT-360-SE72",
+        "proxy_group": "Itek_360_mono",
+        "baseline_normalized_response_integral": 566.4732742676987,
+        "retrofit_normalized_response_integral": 571.0837267914469,
+        "relative_photocurrent_proxy_gain_percent": 0.8138870328363377,
+        "passes_positive_gain_gate": true,
+        "passes_provisional_margin_gate": true
+      },
+      {
+        "proxy_id": "qcells_300_mono",
+        "proxy_label": "QCells Q.PEAK-G4.1 300",
+        "proxy_group": "Qcells_300_mono",
+        "baseline_normalized_response_integral": 562.8412350373419,
+        "retrofit_normalized_response_integral": 567.4296154409107,
+        "relative_photocurrent_proxy_gain_percent": 0.8152175281301718,
+        "passes_positive_gain_gate": true,
+        "passes_provisional_margin_gate": true
+      },
+      {
+        "proxy_id": "mission_300_mono",
+        "proxy_label": "Mission Solar MSE300SQ5T",
+        "proxy_group": "Mission_300_mono",
+        "baseline_normalized_response_integral": 561.501324789437,
+        "retrofit_normalized_response_integral": 566.0739274433838,
+        "relative_photocurrent_proxy_gain_percent": 0.8143529591246289,
+        "passes_positive_gain_gate": true,
+        "passes_provisional_margin_gate": true
+      }
+    ],
+    "ensemble_minimum_gain_percent": 0.8138870328363377,
+    "ensemble_median_gain_percent": 0.8143529591246289,
+    "ensemble_maximum_gain_percent": 0.8152175281301718
+  },
+  "grid_by_proxy": {
+    "itek_360_mono": {
+      "label": "Itek Energy IT-360-SE72",
+      "group": "Itek_360_mono",
+      "role": "architecture-nearest measured mono-Si PERC proxy",
+      "limitation": "Monofacial/single-glass reference; not the target JA Solar bifacial double-glass module.",
+      "source_attributes": {
+        "dataset": {
+          "company": "Itek Energy",
+          "series": "",
+          "model": "IT-360-SE72",
+          "pmax": 360.0,
+          "technology": "mono-Si",
+          "technology2": "PERC",
+          "n_cells": 72
+        },
+        "variable": {
+          "units": "-",
+          "long_name": "Spectral response",
+          "standard_name": "spectral_response"
+        },
+        "wavelength_dimension": "wavelength",
+        "original_sample_count": 181,
+        "source_wavelength_min_nm": 300.0,
+        "source_wavelength_max_nm": 1200.0,
+        "analysis_normalization": "divided by finite non-negative curve maximum"
+      },
+      "grid_statistics": {
+        "minimum_percent": -1.0089244992319168,
+        "percentile_05_percent": -0.25257883334578907,
+        "median_percent": 0.6871220554784851,
+        "percentile_95_percent": 1.5129086178394848,
+        "maximum_percent": 1.8884643012962654
+      },
+      "positive_case_count": 17719,
+      "positive_case_fraction": 0.8789186507936508,
+      "provisional_margin_case_count": 16949,
+      "provisional_margin_case_fraction": 0.8407242063492063
+    },
+    "qcells_300_mono": {
+      "label": "QCells Q.PEAK-G4.1 300",
+      "group": "Qcells_300_mono",
+      "role": "independent measured mono-Si PERC proxy",
+      "limitation": "Different manufacturer, module construction, and nameplate power from the target module.",
+      "source_attributes": {
+        "dataset": {
+          "company": "QCells",
+          "series": "Q.ANTUM",
+          "model": "Q.PEAK-G4.1 300",
+          "pmax": 300.0,
+          "technology": "mono-Si",
+          "technology2": "PERC",
+          "n_cells": 60
+        },
+        "variable": {
+          "units": "-",
+          "long_name": "Spectral response",
+          "standard_name": "spectral_response"
+        },
+        "wavelength_dimension": "wavelength",
+        "original_sample_count": 181,
+        "source_wavelength_min_nm": 300.0,
+        "source_wavelength_max_nm": 1200.0,
+        "analysis_normalization": "divided by finite non-negative curve maximum"
+      },
+      "grid_statistics": {
+        "minimum_percent": -1.0056825335912227,
+        "percentile_05_percent": -0.2512001918024133,
+        "median_percent": 0.6884462296346644,
+        "percentile_95_percent": 1.5133204412670578,
+        "maximum_percent": 1.8882323348633214
+      },
+      "positive_case_count": 17735,
+      "positive_case_fraction": 0.8797123015873016,
+      "provisional_margin_case_count": 16964,
+      "provisional_margin_case_fraction": 0.841468253968254
+    },
+    "mission_300_mono": {
+      "label": "Mission Solar MSE300SQ5T",
+      "group": "Mission_300_mono",
+      "role": "independent measured mono-Si PERC proxy",
+      "limitation": "Different manufacturer, module construction, and nameplate power from the target module.",
+      "source_attributes": {
+        "dataset": {
+          "company": "Mission Solar",
+          "series": "",
+          "model": "MSE300SQ5T",
+          "pmax": 300.0,
+          "technology": "mono-Si",
+          "technology2": "PERC",
+          "n_cells": 60
+        },
+        "variable": {
+          "units": "-",
+          "long_name": "Spectral response",
+          "standard_name": "spectral_response"
+        },
+        "wavelength_dimension": "wavelength",
+        "original_sample_count": 181,
+        "source_wavelength_min_nm": 300.0,
+        "source_wavelength_max_nm": 1200.0,
+        "analysis_normalization": "divided by finite non-negative curve maximum"
+      },
+      "grid_statistics": {
+        "minimum_percent": -0.9941495948789096,
+        "percentile_05_percent": -0.2453163467514057,
+        "median_percent": 0.6890265296726925,
+        "percentile_95_percent": 1.5099391167114156,
+        "maximum_percent": 1.8856485246009418
+      },
+      "positive_case_count": 17777,
+      "positive_case_fraction": 0.881795634920635,
+      "provisional_margin_case_count": 17003,
+      "provisional_margin_case_fraction": 0.8434027777777777
+    }
+  },
+  "across_proxy_conservative_grid": {
+    "minimum_percent": -1.0089244992319168,
+    "percentile_05_percent": -0.25259301076609464,
+    "median_percent": 0.6868304144517763,
+    "percentile_95_percent": 1.5099391167114156,
+    "maximum_percent": 1.8856485246009418,
+    "all_proxies_positive_case_count": 17719,
+    "all_proxies_positive_case_fraction": 0.8789186507936508,
+    "all_proxies_margin_case_count": 16948,
+    "all_proxies_margin_case_fraction": 0.8406746031746032,
+    "worst_case": {
+      "case_id": 5004,
+      "existing_ar_refractive_index": 1.25,
+      "existing_ar_thickness_nm": 140.0,
+      "active_refractive_index": 1.15,
+      "active_extinction_coefficient": 0.001,
+      "active_thickness_nm": 100.0,
+      "primer_refractive_index": 1.25,
+      "primer_thickness_nm": 75.0,
+      "minimum_proxy_gain_percent": -1.0089244992319168,
+      "median_proxy_gain_percent": -1.0056825335912227,
+      "maximum_proxy_gain_percent": -0.9941495948789096,
+      "all_proxies_positive": false,
+      "all_proxies_pass_provisional_margin": false
+    }
+  },
+  "decision": "At least one defined optical case is non-positive for at least one measured SR proxy. Do not freeze an electrical-performance claim.",
+  "interpretation": {
+    "weighting_equation": "Integral[E_AM1.5G(lambda) * SR_proxy(lambda) * T_retrofit(lambda)/T_baseline(lambda)] divided by Integral[E_AM1.5G(lambda) * SR_proxy(lambda)]",
+    "output_quantity": "relative normalized-photocurrent proxy gain",
+    "absolute_units": "none; normalized SR curves cannot establish absolute current or power",
+    "ensemble_rule": "Report every proxy and the across-proxy minimum/median/maximum; do not select only the most favorable proxy."
+  },
+  "required_warnings": [
+    "The proxy SR curves are measured data, but they are not JAM72D10-405/MB data.",
+    "Normalized median SR supports relative spectral weighting only; it does not provide absolute A/W, Isc, Pmax, efficiency, or annual yield.",
+    "The optical stack and n(lambda)/k(lambda) values remain conditional assumptions from Phase 1.6A.",
+    "The deterministic grid is not a probability distribution or confidence interval.",
+    "Do not report any Phase 1.6B value as measured or validated electrical gain of the Sirindhorn modules."
+  ],
+  "outputs": [
+    "/home/punkung/projects/solarflow-ai/imported/solarflow_ai/product1/results/phase_1_6b_proxy_sr.csv",
+    "/home/punkung/projects/solarflow-ai/imported/solarflow_ai/product1/results/phase_1_6b_proxy_sr_summary.json",
+    "/home/punkung/projects/solarflow-ai/imported/solarflow_ai/product1/results/figures/phase_1_6b_proxy_gain_distribution.png",
+    "/home/punkung/projects/solarflow-ai/imported/solarflow_ai/product1/results/figures/phase_1_6b_nominal_spectral_weighting.png"
+  ]
+}

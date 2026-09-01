@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "phase": "1.6B",
+  "title": "SolarFlow measured-module spectral-response proxy ensemble",
+  "scientific_status": "MEASURED_PROXY_SR_SENSITIVITY_ONLY",
+  "format_note": "This file uses JSON syntax, which is valid YAML 1.2, so the Python standard library can read it without PyYAML.",
+  "phase_1_6a_config": "configs/phase_1_6_sensitivity.yaml",
+  "dataset": {
+    "path": "data/external/sr_library.nc",
+    "landing_page": "https://datahub.duramat.org/dataset/module-sr-library",
+    "resource_page": "https://datahub.duramat.org/dataset/module-sr-library/resource/1004264a-d8d6-4eaf-a0de-4efff68d2fc6",
+    "osti_record": "https://www.osti.gov/biblio/2204677",
+    "doi": "10.21948/2204677",
+    "method_report": "https://www.osti.gov/servlets/purl/2293575",
+    "license_status": "The DuraMAT resource page states 'No License Provided'. Do not redistribute or commit the NetCDF file until reuse terms are clarified.",
+    "expected_processing": "NREL module QE measurements converted by Sandia to normalized median spectral response, with zero endpoints at 300 and 1200 nm and monotonic cubic interpolation on a 5 nm grid."
+  },
+  "proxies": [
+    {
+      "id": "itek_360_mono",
+      "label": "Itek Energy IT-360-SE72",
+      "group": "Itek_360_mono",
+      "variable": "sr",
+      "role": "architecture-nearest measured mono-Si PERC proxy",
+      "limitation": "Monofacial/single-glass reference; not the target JA Solar bifacial double-glass module."
+    },
+    {
+      "id": "qcells_300_mono",
+      "label": "QCells Q.PEAK-G4.1 300",
+      "group": "Qcells_300_mono",
+      "variable": "sr",
+      "role": "independent measured mono-Si PERC proxy",
+      "limitation": "Different manufacturer, module construction, and nameplate power from the target module."
+    },
+    {
+      "id": "mission_300_mono",
+      "label": "Mission Solar MSE300SQ5T",
+      "group": "Mission_300_mono",
+      "variable": "sr",
+      "role": "independent measured mono-Si PERC proxy",
+      "limitation": "Different manufacturer, module construction, and nameplate power from the target module."
+    }
+  ],
+  "gates": {
+    "positive_gain_percent": 0.0,
+    "provisional_margin_percent": 0.10
+  },
+  "interpretation": {
+    "weighting_equation": "Integral[E_AM1.5G(lambda) * SR_proxy(lambda) * T_retrofit(lambda)/T_baseline(lambda)] divided by Integral[E_AM1.5G(lambda) * SR_proxy(lambda)]",
+    "output_quantity": "relative normalized-photocurrent proxy gain",
+    "absolute_units": "none; normalized SR curves cannot establish absolute current or power",
+    "ensemble_rule": "Report every proxy and the across-proxy minimum/median/maximum; do not select only the most favorable proxy."
+  },
+  "required_warnings": [
+    "The proxy SR curves are measured data, but they are not JAM72D10-405/MB data.",
+    "Normalized median SR supports relative spectral weighting only; it does not provide absolute A/W, Isc, Pmax, efficiency, or annual yield.",
+    "The optical stack and n(lambda)/k(lambda) values remain conditional assumptions from Phase 1.6A.",
+    "The deterministic grid is not a probability distribution or confidence interval.",
+    "Do not report any Phase 1.6B value as measured or validated electrical gain of the Sirindhorn modules."
+  ]
+}
