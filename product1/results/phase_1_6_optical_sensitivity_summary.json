@@ -1,0 +1,243 @@
+{
+  "phase": "1.6A",
+  "title": "SolarFlow conditional optical uncertainty envelope",
+  "scientific_status": "ASSUMPTION_SENSITIVITY_ONLY",
+  "model": {
+    "wavelength_min_nm": 300.0,
+    "wavelength_max_nm": 1200.0,
+    "wavelength_step_nm": 1.0,
+    "incident_refractive_index": 1.0,
+    "glass_refractive_index": 1.52,
+    "spectrum": "Solcore standard AM1.5G power_density_per_nm",
+    "incidence": "normal",
+    "coherence": "coherent thin-film TMM",
+    "dispersion": "n and k are constant within each defined scenario"
+  },
+  "gates": {
+    "positive_gain_percent": 0.0,
+    "provisional_margin_percent": 0.1
+  },
+  "expected_case_count": 20160,
+  "overall_grid": {
+    "case_count": 20160,
+    "minimum_relative_gain_percent": -0.7656795766349964,
+    "percentile_05_relative_gain_percent": -0.15527291976250643,
+    "median_relative_gain_percent": 0.6314861607681213,
+    "percentile_95_relative_gain_percent": 1.3535085299496517,
+    "maximum_relative_gain_percent": 1.6971145680212116,
+    "positive_gain_case_count": 18234,
+    "positive_gain_case_fraction": 0.9044642857142857,
+    "provisional_margin_case_count": 17430,
+    "provisional_margin_case_fraction": 0.8645833333333334,
+    "all_cases_positive": false,
+    "all_cases_pass_provisional_margin": false
+  },
+  "lossless_subset_k_equals_zero": {
+    "case_count": 5040,
+    "minimum_relative_gain_percent": -0.5420719623556649,
+    "percentile_05_relative_gain_percent": -0.08299131761468644,
+    "median_relative_gain_percent": 0.6900930996174997,
+    "percentile_95_relative_gain_percent": 1.415061654636318,
+    "maximum_relative_gain_percent": 1.6971145680212116,
+    "positive_gain_case_count": 4696,
+    "positive_gain_case_fraction": 0.9317460317460318,
+    "provisional_margin_case_count": 4532,
+    "provisional_margin_case_fraction": 0.8992063492063492,
+    "all_cases_positive": false,
+    "all_cases_pass_provisional_margin": false
+  },
+  "absorption_stress_subset_k_greater_than_zero": {
+    "case_count": 15120,
+    "minimum_relative_gain_percent": -0.7656795766349964,
+    "percentile_05_relative_gain_percent": -0.17546461580636827,
+    "median_relative_gain_percent": 0.607092455605653,
+    "percentile_95_relative_gain_percent": 1.332831420786333,
+    "maximum_relative_gain_percent": 1.6948078265374045,
+    "positive_gain_case_count": 13538,
+    "positive_gain_case_fraction": 0.8953703703703704,
+    "provisional_margin_case_count": 12898,
+    "provisional_margin_case_fraction": 0.853042328042328,
+    "all_cases_positive": false,
+    "all_cases_pass_provisional_margin": false
+  },
+  "nominal_stack_result": {
+    "existing_ar_refractive_index": 1.28,
+    "existing_ar_thickness_nm": 100.0,
+    "active_refractive_index": 1.092934,
+    "active_extinction_coefficient": 0.0,
+    "active_thickness_nm": 116.736,
+    "primer_refractive_index": 1.2,
+    "primer_thickness_nm": 50.0,
+    "incident_power_w_m2": 836.08151675,
+    "baseline_transmitted_power_w_m2": 827.4452255420653,
+    "retrofit_transmitted_power_w_m2": 832.9620331906818,
+    "additional_transmitted_power_w_m2": 5.516807648616577,
+    "baseline_weighted_transmittance_percent": 98.9670515332637,
+    "retrofit_weighted_transmittance_percent": 99.62689241457649,
+    "absolute_gain_percentage_points": 0.6598408813127943,
+    "relative_gain_percent": 0.6667278362749,
+    "retrofit_absorbed_power_w_m2": 0.0,
+    "retrofit_weighted_absorptance_percent": 0.0,
+    "passes_positive_gain_gate": true,
+    "passes_provisional_margin_gate": true,
+    "maximum_physical_violation": 0.0
+  },
+  "worst_defined_case": {
+    "existing_ar_refractive_index": 1.25,
+    "existing_ar_thickness_nm": 120.0,
+    "active_refractive_index": 1.15,
+    "active_extinction_coefficient": 0.001,
+    "active_thickness_nm": 135.0,
+    "primer_refractive_index": 1.25,
+    "primer_thickness_nm": 75.0,
+    "incident_power_w_m2": 836.08151675,
+    "baseline_transmitted_power_w_m2": 828.9011194790753,
+    "retrofit_transmitted_power_w_m2": 822.5543928967252,
+    "additional_transmitted_power_w_m2": -6.346726582350129,
+    "baseline_weighted_transmittance_percent": 99.14118454635425,
+    "retrofit_weighted_transmittance_percent": 98.38208074424881,
+    "absolute_gain_percentage_points": -0.7591038021054458,
+    "relative_gain_percent": -0.7656795766349964,
+    "retrofit_absorbed_power_w_m2": 2.2462713069081186,
+    "retrofit_weighted_absorptance_percent": 0.26866654290358927,
+    "passes_positive_gain_gate": false,
+    "passes_provisional_margin_gate": false,
+    "maximum_physical_violation": 0.0
+  },
+  "best_defined_case": {
+    "existing_ar_refractive_index": 1.35,
+    "existing_ar_thickness_nm": 80.0,
+    "active_refractive_index": 1.08,
+    "active_extinction_coefficient": 0.0,
+    "active_thickness_nm": 110.0,
+    "primer_refractive_index": 1.2,
+    "primer_thickness_nm": 75.0,
+    "incident_power_w_m2": 836.08151675,
+    "baseline_transmitted_power_w_m2": 820.758439879797,
+    "retrofit_transmitted_power_w_m2": 834.6876509312607,
+    "additional_transmitted_power_w_m2": 13.929211051463653,
+    "baseline_weighted_transmittance_percent": 98.16727477366483,
+    "retrofit_weighted_transmittance_percent": 99.83328589487812,
+    "absolute_gain_percentage_points": 1.6660111212132778,
+    "relative_gain_percent": 1.6971145680212116,
+    "retrofit_absorbed_power_w_m2": 0.0,
+    "retrofit_weighted_absorptance_percent": 0.0,
+    "passes_positive_gain_gate": true,
+    "passes_provisional_margin_gate": true,
+    "maximum_physical_violation": 0.0
+  },
+  "main_effect_ranking": [
+    {
+      "parameter": "existing_ar_refractive_index",
+      "mean_gain_by_level_percent": {
+        "1.25": 0.18627141377650036,
+        "1.28": 0.4915317166542432,
+        "1.3": 0.6962247712558723,
+        "1.35": 1.2087066330820848
+      },
+      "main_effect_spread_percent": 1.0224352193055846
+    },
+    {
+      "parameter": "existing_ar_thickness_nm",
+      "mean_gain_by_level_percent": {
+        "80": 1.0244834526586026,
+        "100": 0.6005156084826047,
+        "120": 0.4475198028457009,
+        "140": 0.5102156707817925
+      },
+      "main_effect_spread_percent": 0.5769636498129017
+    },
+    {
+      "parameter": "active_extinction_coefficient",
+      "mean_gain_by_level_percent": {
+        "0": 0.7126336081948926,
+        "1e-05": 0.710217526347567,
+        "0.0001": 0.6884762642775858,
+        "0.001": 0.47140713594865535
+      },
+      "main_effect_spread_percent": 0.24122647224623728
+    },
+    {
+      "parameter": "active_refractive_index",
+      "mean_gain_by_level_percent": {
+        "1.08": 0.7061375858025757,
+        "1.09": 0.7136642172453195,
+        "1.092934": 0.7132338298675782,
+        "1.1": 0.7073375469469481,
+        "1.12": 0.6540873989946854,
+        "1.14": 0.5485027402149596,
+        "1.15": 0.47682211677315944
+      },
+      "main_effect_spread_percent": 0.23684210047216003
+    },
+    {
+      "parameter": "primer_thickness_nm",
+      "mean_gain_by_level_percent": {
+        "30": 0.7082731651051801,
+        "50": 0.6511919849614041,
+        "75": 0.5775857510099413
+      },
+      "main_effect_spread_percent": 0.13068741409523887
+    },
+    {
+      "parameter": "primer_refractive_index",
+      "mean_gain_by_level_percent": {
+        "1.15": 0.6546043286092245,
+        "1.2": 0.6870640756544257,
+        "1.25": 0.5953824968128753
+      },
+      "main_effect_spread_percent": 0.09168157884155048
+    },
+    {
+      "parameter": "active_thickness_nm",
+      "mean_gain_by_level_percent": {
+        "100": 0.6744517277780661,
+        "110": 0.6693045088031246,
+        "116.736": 0.6569966475126098,
+        "125": 0.6333418404414691,
+        "135": 0.5943234439256061
+      },
+      "main_effect_spread_percent": 0.08012828385245996
+    }
+  ],
+  "parameter_provenance": {
+    "existing_ar_refractive_index": "ASSUMED RANGE: exact JAM72D10-405/MB factory-AR n(lambda) is not public; values reuse the Phase 1 diagnostic grid.",
+    "existing_ar_thickness_nm": "ASSUMED RANGE: exact factory-AR thickness is not public; values reuse the Phase 1 diagnostic grid.",
+    "active_refractive_index": "MIXED: 1.08-1.15 is a literature-precedent envelope for fabricated hollow/porous silica; 1.092934 is the conditional SolarFlow optimizer point.",
+    "active_extinction_coefficient": "ASSUMED STRESS RANGE: no candidate-specific k(lambda) has been measured. These values test sensitivity to small non-zero absorption and are not material data.",
+    "active_thickness_nm": "ASSUMED ENGINEERING RANGE around the conditional 116.736 nm optimizer point; not a fabrication specification.",
+    "primer_refractive_index": "ASSUMED ENGINEERING RANGE inherited from the passed active/primer tolerance screen; no commercial primer is selected.",
+    "primer_thickness_nm": "ASSUMED ENGINEERING RANGE inherited from the passed active/primer tolerance screen; no fabrication process is selected.",
+    "glass_refractive_index": "REPRESENTATIVE CONSTANT: not measured n(lambda) for the installed module cover glass."
+  },
+  "references": [
+    {
+      "id": "phase_1_5_record",
+      "type": "project_record",
+      "citation": "docs/SolarFlow_Phase_1_5_Research_Record.md"
+    },
+    {
+      "id": "tao_2016",
+      "type": "literature_precedent",
+      "citation": "Tao et al., Materials Letters (2016), DOI: 10.1016/j.matlet.2016.07.042"
+    },
+    {
+      "id": "ren_2018",
+      "type": "literature_precedent",
+      "citation": "Ren et al., Journal of Porous Materials (2018), DOI: 10.1007/s10934-017-0420-3"
+    }
+  ],
+  "decision": "The current architecture is not positive throughout the defined uncertainty grid. Use the sensitivity ranking to prioritize measurements and do not freeze a physical design.",
+  "warnings": [
+    "Scenario-grid fractions are not probabilities or confidence intervals.",
+    "Passing this screen is not material validation, electrical-power validation, annual-yield validation, or field validation.",
+    "The exact module optical stack and candidate n(lambda)/k(lambda) remain measurement-required.",
+    "Do not report any Phase 1.6A value as measured performance of JAM72D10-405/MB."
+  ],
+  "outputs": [
+    "product1/results/phase_1_6_optical_sensitivity.csv",
+    "product1/results/phase_1_6_optical_sensitivity_summary.json",
+    "product1/results/figures/phase_1_6_ar_robustness_heatmap.png",
+    "product1/results/figures/phase_1_6_gain_distribution.png"
+  ]
+}

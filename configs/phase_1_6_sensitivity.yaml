@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "phase": "1.6A",
+  "title": "SolarFlow conditional optical uncertainty envelope",
+  "scientific_status": "ASSUMPTION_SENSITIVITY_ONLY",
+  "format_note": "This file uses JSON syntax, which is valid YAML 1.2, so the Python standard library can read it without PyYAML.",
+  "model": {
+    "wavelength_min_nm": 300.0,
+    "wavelength_max_nm": 1200.0,
+    "wavelength_step_nm": 1.0,
+    "incident_refractive_index": 1.0,
+    "glass_refractive_index": 1.52,
+    "spectrum": "Solcore standard AM1.5G power_density_per_nm",
+    "incidence": "normal",
+    "coherence": "coherent thin-film TMM",
+    "dispersion": "n and k are constant within each defined scenario"
+  },
+  "gates": {
+    "positive_gain_percent": 0.0,
+    "provisional_margin_percent": 0.10
+  },
+  "nominal_stack": {
+    "existing_ar_refractive_index": 1.28,
+    "existing_ar_thickness_nm": 100.0,
+    "active_refractive_index": 1.092934,
+    "active_extinction_coefficient": 0.0,
+    "active_thickness_nm": 116.736,
+    "primer_refractive_index": 1.20,
+    "primer_thickness_nm": 50.0
+  },
+  "sweep": {
+    "existing_ar_refractive_index": [1.25, 1.28, 1.30, 1.35],
+    "existing_ar_thickness_nm": [80.0, 100.0, 120.0, 140.0],
+    "active_refractive_index": [1.08, 1.09, 1.092934, 1.10, 1.12, 1.14, 1.15],
+    "active_extinction_coefficient": [0.0, 0.00001, 0.0001, 0.001],
+    "active_thickness_nm": [100.0, 110.0, 116.736, 125.0, 135.0],
+    "primer_refractive_index": [1.15, 1.20, 1.25],
+    "primer_thickness_nm": [30.0, 50.0, 75.0]
+  },
+  "provenance": {
+    "existing_ar_refractive_index": "ASSUMED RANGE: exact JAM72D10-405/MB factory-AR n(lambda) is not public; values reuse the Phase 1 diagnostic grid.",
+    "existing_ar_thickness_nm": "ASSUMED RANGE: exact factory-AR thickness is not public; values reuse the Phase 1 diagnostic grid.",
+    "active_refractive_index": "MIXED: 1.08-1.15 is a literature-precedent envelope for fabricated hollow/porous silica; 1.092934 is the conditional SolarFlow optimizer point.",
+    "active_extinction_coefficient": "ASSUMED STRESS RANGE: no candidate-specific k(lambda) has been measured. These values test sensitivity to small non-zero absorption and are not material data.",
+    "active_thickness_nm": "ASSUMED ENGINEERING RANGE around the conditional 116.736 nm optimizer point; not a fabrication specification.",
+    "primer_refractive_index": "ASSUMED ENGINEERING RANGE inherited from the passed active/primer tolerance screen; no commercial primer is selected.",
+    "primer_thickness_nm": "ASSUMED ENGINEERING RANGE inherited from the passed active/primer tolerance screen; no fabrication process is selected.",
+    "glass_refractive_index": "REPRESENTATIVE CONSTANT: not measured n(lambda) for the installed module cover glass."
+  },
+  "references": [
+    {
+      "id": "phase_1_5_record",
+      "type": "project_record",
+      "citation": "docs/SolarFlow_Phase_1_5_Research_Record.md"
+    },
+    {
+      "id": "tao_2016",
+      "type": "literature_precedent",
+      "citation": "Tao et al., Materials Letters (2016), DOI: 10.1016/j.matlet.2016.07.042"
+    },
+    {
+      "id": "ren_2018",
+      "type": "literature_precedent",
+      "citation": "Ren et al., Journal of Porous Materials (2018), DOI: 10.1007/s10934-017-0420-3"
+    }
+  ],
+  "required_warnings": [
+    "Scenario-grid fractions are not probabilities or confidence intervals.",
+    "Passing this screen is not material validation, electrical-power validation, annual-yield validation, or field validation.",
+    "The exact module optical stack and candidate n(lambda)/k(lambda) remain measurement-required.",
+    "Do not report any Phase 1.6A value as measured performance of JAM72D10-405/MB."
+  ]
+}
