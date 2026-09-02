@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07172b"/>
+      <stop offset="0.58" stop-color="#0b2440"/>
+      <stop offset="1" stop-color="#063b3a"/>
+    </linearGradient>
+    <linearGradient id="active" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b8f7ff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#28cbe2" stop-opacity="0.82"/>
+    </linearGradient>
+    <linearGradient id="primer" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9f99d" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#72c472" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="ar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff3b0" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#ffc857" stop-opacity="0.87"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d7f2ff" stop-opacity="0.80"/>
+      <stop offset="1" stop-color="#5aa9e6" stop-opacity="0.56"/>
+    </linearGradient>
+    <linearGradient id="cell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f6cb0"/>
+      <stop offset="1" stop-color="#082c59"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="shadowBlur"/>
+      <feOffset in="shadowBlur" dx="0" dy="12" result="shadowOffset"/>
+      <feComponentTransfer in="shadowOffset" result="shadowOpacity">
+        <feFuncA type="linear" slope="0.34"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="shadowOpacity"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrowYellow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#ffd166"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#65e6a7"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#ff8c61"/>
+    </marker>
+    <clipPath id="cellClip">
+      <polygon points="282,716 860,716 1020,624 442,624"/>
+    </clipPath>
+    <style>
+      .font { font-family: Inter, Arial, sans-serif; }
+      .small { font-size: 18px; fill: #b8c9d9; }
+      .label { font-size: 21px; font-weight: 700; fill: #f7fbff; }
+      .value { font-size: 18px; fill: #c8d9e7; }
+      .micro { font-size: 15px; fill: #9db2c4; }
+      .call-line { fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1480" cy="85" r="230" fill="#0fc2a0" opacity="0.06"/>
+  <circle cx="85" cy="770" r="300" fill="#1f7bd8" opacity="0.07"/>
+
+  <!-- Header -->
+  <g class="font">
+    <rect x="72" y="56" width="315" height="36" rx="18" fill="#153955" stroke="#37d6bd" stroke-opacity="0.55"/>
+    <text x="230" y="80" text-anchor="middle" font-size="16" font-weight="700" letter-spacing="1.4" fill="#77f0d4">CIRCULAR INNOVATION • MODEL V1</text>
+    <text x="72" y="142" font-size="48" font-weight="800" fill="#ffffff">SOLARFLOW RETROFIT</text>
+    <text x="72" y="190" font-size="42" font-weight="300" fill="#8ee8f5">OPTICAL STACK</text>
+    <text x="74" y="226" class="small">Direct-coating concept for an existing PV module</text>
+  </g>
+
+  <!-- Sun and light paths -->
+  <g filter="url(#glow)">
+    <circle cx="198" cy="315" r="42" fill="#ffd166"/>
+    <g stroke="#ffd166" stroke-width="6" stroke-linecap="round">
+      <line x1="198" y1="249" x2="198" y2="227"/>
+      <line x1="198" y1="381" x2="198" y2="403"/>
+      <line x1="132" y1="315" x2="110" y2="315"/>
+      <line x1="264" y1="315" x2="286" y2="315"/>
+      <line x1="151" y1="268" x2="136" y2="253"/>
+      <line x1="245" y1="362" x2="260" y2="377"/>
+      <line x1="245" y1="268" x2="260" y2="253"/>
+      <line x1="151" y1="362" x2="136" y2="377"/>
+    </g>
+  </g>
+  <path d="M230 345 C300 395 345 414 430 444" fill="none" stroke="#ffd166" stroke-width="8" marker-end="url(#arrowYellow)" opacity="0.95"/>
+  <g class="font">
+    <text x="101" y="438" font-size="17" fill="#ffd166">Incident light</text>
+  </g>
+
+  <!-- Stack shadow -->
+  <ellipse cx="666" cy="765" rx="410" ry="52" fill="#000" opacity="0.30"/>
+
+  <!-- Solar cell module -->
+  <g filter="url(#shadow)">
+    <polygon points="282,716 860,716 1020,624 442,624" fill="url(#cell)" stroke="#4fa3df" stroke-width="3"/>
+    <polygon points="282,716 860,716 860,744 282,744" fill="#061e3d"/>
+    <polygon points="860,716 1020,624 1020,652 860,744" fill="#04162f"/>
+    <g clip-path="url(#cellClip)" stroke="#83bdf0" stroke-width="2" opacity="0.72">
+      <line x1="350" y1="590" x2="350" y2="760"/>
+      <line x1="430" y1="580" x2="430" y2="760"/>
+      <line x1="510" y1="570" x2="510" y2="760"/>
+      <line x1="590" y1="560" x2="590" y2="760"/>
+      <line x1="670" y1="550" x2="670" y2="760"/>
+      <line x1="750" y1="540" x2="750" y2="760"/>
+      <line x1="830" y1="530" x2="830" y2="760"/>
+      <line x1="910" y1="520" x2="910" y2="760"/>
+      <line x1="250" y1="680" x2="1030" y2="680"/>
+      <line x1="250" y1="640" x2="1030" y2="640"/>
+    </g>
+  </g>
+
+  <!-- Cover glass -->
+  <g filter="url(#shadow)">
+    <polygon points="300,635 862,635 1006,552 444,552" fill="url(#glass)" stroke="#9ed8ff" stroke-width="3"/>
+    <polygon points="300,635 862,635 862,651 300,651" fill="#4b9fd4" opacity="0.72"/>
+    <polygon points="862,635 1006,552 1006,568 862,651" fill="#367dab" opacity="0.65"/>
+  </g>
+
+  <!-- Existing AR -->
+  <g filter="url(#shadow)">
+    <polygon points="322,539 865,539 985,470 442,470" fill="url(#ar)" stroke="#ffe29a" stroke-width="3"/>
+    <polygon points="322,539 865,539 865,550 322,550" fill="#dcae43" opacity="0.78"/>
+    <polygon points="865,539 985,470 985,481 865,550" fill="#bd8c25" opacity="0.70"/>
+  </g>
+
+  <!-- Release primer -->
+  <g filter="url(#shadow)">
+    <polygon points="344,446 868,446 966,390 442,390" fill="url(#primer)" stroke="#b8ef9f" stroke-width="3"/>
+    <polygon points="344,446 868,446 868,456 344,456" fill="#57a85f" opacity="0.82"/>
+    <polygon points="868,446 966,390 966,400 868,456" fill="#3f834b" opacity="0.76"/>
+  </g>
+
+  <!-- Active optical layer -->
+  <g filter="url(#shadow)">
+    <polygon points="366,350 871,350 947,306 442,306" fill="url(#active)" stroke="#8ff1ff" stroke-width="4"/>
+    <polygon points="366,350 871,350 871,360 366,360" fill="#22b7ce" opacity="0.88"/>
+    <polygon points="871,350 947,306 947,316 871,360" fill="#1594aa" opacity="0.82"/>
+  </g>
+
+  <!-- Explanatory light paths rendered above the layers -->
+  <path d="M466 348 C420 320 385 294 348 266" fill="none" stroke="#ff8c61" stroke-width="5" marker-end="url(#arrowOrange)"/>
+  <path d="M640 366 L640 724" fill="none" stroke="#65e6a7" stroke-width="7" marker-end="url(#arrowGreen)" opacity="0.92"/>
+  <g class="font">
+    <rect x="270" y="237" width="188" height="35" rx="17" fill="#122a42" stroke="#ff8c61" stroke-opacity="0.65"/>
+    <text x="364" y="260" text-anchor="middle" font-size="15" fill="#ffad8f">Modeled reflection</text>
+    <rect x="662" y="566" width="235" height="36" rx="18" fill="#102c47" stroke="#65e6a7" stroke-opacity="0.72"/>
+    <text x="779" y="590" text-anchor="middle" font-size="15" fill="#65e6a7">Modeled transmitted light</text>
+  </g>
+
+  <!-- Stack ownership brackets -->
+  <g class="font">
+    <path d="M1035 302 h22 v155 h-22" fill="none" stroke="#5ee7ff" stroke-width="3"/>
+    <text x="1070" y="363" font-size="17" font-weight="700" fill="#5ee7ff">SOLARFLOW</text>
+    <text x="1070" y="387" font-size="15" fill="#9deef8">retrofit layers</text>
+    <text x="1070" y="410" font-size="15" fill="#9deef8">direct coating</text>
+
+    <path d="M1035 469 h22 v281 h-22" fill="none" stroke="#76aee3" stroke-width="3"/>
+    <text x="1070" y="615" font-size="16" font-weight="700" fill="#9ecdf2">EXISTING</text>
+    <text x="1070" y="638" font-size="16" font-weight="700" fill="#9ecdf2">MODULE</text>
+  </g>
+
+  <!-- Callouts -->
+  <g class="font">
+    <path class="call-line" d="M947 308 L1180 260 L1210 260" stroke="#5ee7ff"/>
+    <circle cx="947" cy="308" r="6" fill="#5ee7ff"/>
+    <rect x="1210" y="218" width="320" height="100" rx="14" fill="#0c2843" stroke="#5ee7ff" stroke-width="2"/>
+    <text x="1232" y="250" class="label">ACTIVE OPTICAL LAYER</text>
+    <text x="1232" y="277" class="value">n = 1.092934 • d = 116.736 nm</text>
+    <text x="1232" y="300" class="micro">Modeled target — not a material recipe</text>
+
+    <path class="call-line" d="M966 393 L1160 362 L1210 362" stroke="#9adf83"/>
+    <circle cx="966" cy="393" r="6" fill="#9adf83"/>
+    <rect x="1210" y="330" width="320" height="92" rx="14" fill="#0c2843" stroke="#88d47b" stroke-width="2"/>
+    <text x="1232" y="361" class="label">RELEASE PRIMER</text>
+    <text x="1232" y="388" class="value">n = 1.20 • d = 50 nm</text>
+    <text x="1232" y="408" class="micro">Generic modeled interface</text>
+
+    <path class="call-line" d="M985 473 L1160 472 L1210 472" stroke="#ffd166"/>
+    <circle cx="985" cy="473" r="6" fill="#ffd166"/>
+    <rect x="1210" y="440" width="320" height="96" rx="14" fill="#0c2843" stroke="#ffd166" stroke-width="2"/>
+    <text x="1232" y="471" class="label">FACTORY AR — ASSUMED</text>
+    <text x="1232" y="498" class="value">n = 1.28 • d = 100 nm</text>
+    <text x="1232" y="519" class="micro">Actual n(λ), k(λ), d: measurement required</text>
+
+    <path class="call-line" d="M1006 555 L1160 570 L1210 570" stroke="#8ed1fc"/>
+    <circle cx="1006" cy="555" r="6" fill="#8ed1fc"/>
+    <rect x="1210" y="550" width="320" height="88" rx="14" fill="#0c2843" stroke="#8ed1fc" stroke-width="2"/>
+    <text x="1232" y="582" class="label">COVER GLASS</text>
+    <text x="1232" y="609" class="value">Representative n = 1.52</text>
+    <text x="1232" y="629" class="micro">Target dispersion remains unmeasured</text>
+
+    <path class="call-line" d="M1018 630 L1160 677 L1210 677" stroke="#4fa3df"/>
+    <circle cx="1018" cy="630" r="6" fill="#4fa3df"/>
+    <rect x="1210" y="655" width="320" height="82" rx="14" fill="#0c2843" stroke="#4fa3df" stroke-width="2"/>
+    <text x="1232" y="688" class="label">SOLAR CELLS / MODULE</text>
+    <text x="1232" y="715" class="value">JA Solar family reference</text>
+  </g>
+
+  <!-- Metric cards -->
+  <g class="font">
+    <rect x="72" y="790" width="360" height="76" rx="16" fill="#102c47" stroke="#47cfe3"/>
+    <text x="94" y="819" font-size="15" letter-spacing="1" fill="#8ee8f5">NOMINAL OPTICAL MODEL</text>
+    <text x="94" y="849" font-size="27" font-weight="800" fill="#ffffff">+0.6667%</text>
+    <text x="250" y="849" class="micro">relative transmission</text>
+
+    <rect x="452" y="790" width="382" height="76" rx="16" fill="#102c47" stroke="#65e6a7"/>
+    <text x="474" y="819" font-size="15" letter-spacing="1" fill="#88f1bd">MEASURED-SR PROXY WEIGHTING</text>
+    <text x="474" y="849" font-size="27" font-weight="800" fill="#ffffff">≈ +0.814%</text>
+    <text x="662" y="849" class="micro">nominal proxy result</text>
+
+    <rect x="854" y="790" width="676" height="76" rx="16" fill="#3a2632" stroke="#ff9c7d"/>
+    <text x="876" y="819" font-size="15" font-weight="700" letter-spacing="0.8" fill="#ffb59e">CONCEPTUAL • NOT TO SCALE • NOT A FUNCTIONAL PROTOTYPE</text>
+    <text x="876" y="847" class="value">Topcoat excluded • Electrical and field validation remain open</text>
+  </g>
+</svg>
